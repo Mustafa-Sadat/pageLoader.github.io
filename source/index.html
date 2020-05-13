@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="ie=edge">
+  <title>How To Create a Loader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+  <div id="loader"></div>
+  
+  <div id="myDiv" class="animate-bottom">
+    <h1>Tada!</h2>
+    <p>Some text in my newly loaded page</p>
+    <img src="1.jpg" alt="">
+  </div>
+  
+
+
+  <script>
+    var myVar;
+    function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+  </script>
+  
+  </body>
+</html>
